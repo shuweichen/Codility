@@ -15,14 +15,13 @@ def solution(A):
 		if A[i] == 0 and ~start:
 			start = 1
 
-		if (start):
+		if start:
+			if count > 1000000000:
+				return -1
 			if A[i+1] != 0:
 				count = count + acc
-			else :
+			else:
 				acc += 1
-
-	if count > 1000000000:
-		return -1
 
 	else:
 		return count
